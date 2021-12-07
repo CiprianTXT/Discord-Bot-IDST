@@ -8,8 +8,16 @@ import code         # code.interact
 import os           # environment variables
 import inspect      # call stack inspection
 import random       # dumb random number generator
+import argparse     # something cool af
 
 from discord.ext import commands    # Bot class and utils
+
+# here is the --token page
+parser = argparse.ArgumentParser()
+parser.add_argument("-t", "--token", help="this does something cool for sure", action="store_true")
+args = parser.parse_args()
+if args.verbose:
+    print("I did domething cool")
 
 ################################################################################
 ############################### HELPER FUNCTIONS ###############################
